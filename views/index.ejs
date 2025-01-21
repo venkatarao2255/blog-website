@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Website</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <h1>Blog Website</h1>
+        <nav>
+            <a href="/add">Add New Post</a>
+        </nav>
+    </header>
+    <main>
+        <section class="blog-posts">
+            <% posts.forEach(post => { %>
+                <article class="blog-post">
+                    <h2><%= post.title %></h2>
+                    <p><%= post.content %></p>
+                    <% if (post.media) { %>
+                        <div class="media">
+                            <% if (post.media.endsWith('.jpg') || post.media.endsWith('.jpeg') || post.media.endsWith('.png')) { %>
+                                <img src="<%= post.media %>" alt="Post Media" class="media-image">
+                            <% } else if (post.media.endsWith('.mp4')) { %>
+                                <video controls class="media-video">
+                                    <source src="<%= post.media %>" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            <% } %>
+                        </div>
+                    <% } %>
+                    <a href="/edit/<%= post.id %>">Edit</a> | <a href="/delete/<%= post.id %>">Delete</a>
+                </article>
+            <% }) %>
+        </section>
+    </main>
+</body>
+</html>

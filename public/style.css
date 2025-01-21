@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5; /* Light background similar to Facebook */
+}
+
+header {
+    background-color: #1877f2; /* Facebook blue */
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    color: #dfe3eb;
+}
+
+.blog-posts {
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.blog-post {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #1877f2; /* Accent border in Facebook blue */
+}
+
+.blog-post img, .blog-post video {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #1877f2; /* Facebook blue */
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+}
+
+form button:hover {
+    background-color: #165eab; /* Darker Facebook blue for hover effect */
+}
+
+footer {
+    background-color: #1877f2; /* Facebook blue */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
